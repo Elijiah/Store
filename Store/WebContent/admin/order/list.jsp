@@ -14,7 +14,7 @@
 					$.post("${pageContext.request.contextPath}/AdminOrderServlet",{"method":"showDetail","oid":oid},function(data){
 						$(data).each(function(i,n){
 							// 显示图片,名称,单价,数量
-							$("#div"+oid).append("<img width='60' height='65' src='${pageContext.request.contextPath}/"+n.product.pimage+"'>&nbsp;"+n.product.pname+"&nbsp;"+n.product.shop_price+"<br/>");
+							$("#div"+oid).append("<img width='40' height='45'  src='${pageContext.request.contextPath}/"+n.product.pimage+"'>&nbsp;"+"<br>"+n.product.pname+"<br>"+n.product.shop_price+"<br>");
 						});
 					},"json");
 					

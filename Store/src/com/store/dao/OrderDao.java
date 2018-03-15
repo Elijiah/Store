@@ -26,4 +26,13 @@ public interface OrderDao {
 
 	void update(Order order) throws SQLException;
 
+
+	List<Order> findAll()throws SQLException;
+
+
+	List<Order> findByState(int pstate)throws SQLException;
+
+
+	List<OrderItem> showDetail(String oid)throws SQLException, Exception;
+
 }

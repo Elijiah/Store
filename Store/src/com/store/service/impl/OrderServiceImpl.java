@@ -77,4 +77,23 @@ public class OrderServiceImpl implements OrderService {
 		orderDao.update(order);
 	}
 
+	@Override
+	public List<Order> findAll() throws Exception {
+		OrderDao orderDao = (OrderDao) BeanFactory.getBean("orderDao");
+		return orderDao. findAll();
+	}
+
+	@Override
+	public List<Order> findByState(int pstate) throws Exception {
+		OrderDao orderDao = (OrderDao) BeanFactory.getBean("orderDao");
+		return orderDao.findByState(pstate);
+	}
+
+	@Override
+	public List<OrderItem> showDetail(String oid) throws Exception {
+		OrderDao orderDao = (OrderDao) BeanFactory.getBean("orderDao");
+		return orderDao. showDetail(oid);
+	
+	}
+
 }
